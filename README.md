@@ -1,11 +1,11 @@
-#  family-app
+#  familyApp
 
-[![Stack](https://img.shields.io/badge/Stack-Next.js%20|%20GraphQL%20|%20Prisma-blue)](https://github.com/krystof-marcol/family-app)
+[![Stack](https://img.shields.io/badge/Stack-Next.js%20|%20GraphQL%20|%20Prisma-blue)](https://github.com/krystof-marcol/familyApp)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ##  Overview
 
-**family-app** is an open-source, family-centric management platform designed to streamline household organization, scheduling, and communication. Built with modern web technologies, it offers a scalable architecture with **GraphQL, Prisma, and Next.js**, ensuring a robust and flexible foundation.
+**familyApp** is an open-source, family-centric management platform designed to streamline household organization, scheduling, and communication. Built with modern web technologies, it offers a scalable architecture with **GraphQL, Prisma, and Next.js**, ensuring a robust and flexible foundation.
 
 ##  Why familyApp?
 
@@ -31,16 +31,16 @@ This project requires the following dependencies:
 
 ### Installation
 
-Build **family-app** from the source and install dependencies:
+Build **familyApp** from the source and install dependencies:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/krystof-marcol/family-app](https://github.com/krystof-marcol/family-app)
+    git clone [https://github.com/krystof-marcol/familyApp](https://github.com/krystof-marcol/familyApp)
     ```
 
 2.  **Navigate to the project directory:**
     ```bash
-    cd family-app
+    cd familyApp
     ```
 
 3.  **Install the dependencies:**
