@@ -1,0 +1,554 @@
+{
+  "HomePage": { "title": "Vítejte" },
+  "Nav": { "home": "Domov", "about": "Informace" },
+  "Settings": {
+    "title": "Nastavení",
+    "Theme": {
+      "title": "Téma",
+      "desc": "Přepínání mezi světlým a tmavým režimem",
+      "button": { "light": "Světlý", "dark": "Tmavý" }
+    },
+    "Language": { "title": "Jazyk", "desc": "Vyberte preferovaný jazyk" },
+    "Profile": {
+      "title": "Profil",
+      "desc": "Přejít do nastavení profilu",
+      "button": "Profil"
+    },
+    "ChangePassword": {
+      "title": "Změnit heslo",
+      "desc": "Změňte své heslo k účtu",
+      "button": "Změnit",
+      "dialogTitle": "Aktualizace hesla",
+      "dialogDesc": "Zadejte staré heslo a nastavte nové.",
+      "oldPasswordPlaceholder": "Staré heslo",
+      "newPasswordPlaceholder": "Nové heslo",
+      "confirmPasswordPlaceholder": "Potvrďte nové heslo",
+      "cancel": "Zrušit",
+      "submit": "Potvrdit",
+      "success": "Heslo bylo změněno",
+      "passwordMismatch": "Hesla se neshodují"
+    },
+    "Family": {
+      "title": "Rodina",
+      "desc": "Přejít do nastavení rodiny",
+      "button": "Rodina",
+      "deleteUser": "Uživatel byl smazán",
+      "makeAdmin": "Uživatel je nyní Správce"
+    },
+    "titleNotification": "Oznámení",
+    "titleBody": "Oznámení jsou zapnuta!",
+    "Notification": {
+      "title": "Oznámení",
+      "desc": "Oznámení na vašem telefonu",
+      "enabled": "Povoleno",
+      "disabled": "Zakázáno",
+      "calendar": "Kalendář",
+      "shopList": "Nákupní košík",
+      "homeDuty": "Domácí povinnosti",
+      "expenses": "Výdaje"
+    },
+    "Credit": {
+      "title": "O nás",
+      "desc": "Kdo vytvořil tuto aplikaci?",
+      "infoAboutMe": "Jmenuji se Kryštof Marcol. Je mi 18 let a pocházím z České republiky. Baví mě moderní technologie a vývoj webových aplikací, zejména tvorba progresivních webových aplikací (PWA) v Next.js. Rád zkouším nové nástroje, pracuji na vlastních projektech a postupně si rozšiřuji své znalosti. Mimo programování mám rád fotbal a videohry, které mi pomáhají odpočinout si a udržet rovnováhu mezi školou a vývojem.",
+      "button": "O nás",
+      "contact": "Twitter",
+      "gmail": "E-mail",
+      "copied": "Zkopírováno",
+      "aboutApp": "O aplikaci",
+      "features": "Hlavní funkce",
+
+      "appDescription1": "Tato aplikace je vytvořena proto, aby pomohla rodinám zůstat organizované a propojené každý den.",
+      "appDescription2": "Zjednodušuje každodenní fungování tím, že na jednom místě spojuje události, domácí povinnosti, nákupní seznamy a rodinné výdaje.",
+      "appDescription3": "Cílem je snížit každodenní stres a zajistit, aby každý člen rodiny přesně věděl, co je potřeba udělat.",
+
+      "featureCalendar": "Sdílený rodinný kalendář",
+      "featureDuties": "Správa domácích povinností",
+      "featureShopping": "Sdílené nákupní seznamy",
+      "featureExpenses": "Sledování rodinných výdajů",
+      "featureSync": "Okamžitá synchronizace mezi zařízeními",
+      "featureNotifications": "Chytrá upozornění a připomínky",
+
+      "supportTitle": "O mé práci",
+      "supportWays": "Jak můžete podpořit",
+
+      "supportText1": "Tuto aplikaci jsem vytvořil jako osobní projekt, který má rodinám pomoci být více organizované a lépe spolu komunikovat.",
+      "supportText2": "Každá funkce a každá stránka je vytvořena s důrazem na jednoduchost a moderní design.",
+      "supportText3": "Pokud vám aplikace pomáhá, jakákoli forma podpory pro mě hodně znamená.",
+
+      "supportFeedback": "Pošlete mi zpětnou vazbu, abych mohl aplikaci zlepšovat",
+      "supportShare": "Sdílejte aplikaci s přáteli nebo rodinou",
+      "supportDonate": "Podpořte projekt malou dobrovolnou částkou, pokud chcete",
+      "supportIdeas": "Navrhněte nové funkce nebo vylepšení",
+
+      "donateButton": "Klikněte zde pro podporu projektu"
+    },
+    "ChangeName": {
+      "title": "Změnit jméno",
+      "desc": "Změňte své uživatelské jméno",
+      "button": "Změnit",
+      "dialogTitle": "Změna jména",
+      "dialogDesc": "Zadejte nové jméno a potvrďte.",
+      "placeholder": "Nové jméno",
+      "cancel": "Zrušit",
+      "submit": "Potvrdit"
+    },
+    "Logout": {
+      "title": "Odhlásit se",
+      "desc": "Odhlásit se ze svého účtu",
+      "button": "Odhlásit"
+    },
+    "DeleteAccount": {
+      "title": "Smazat účet",
+      "desc": "Váš účet bude nenávratně smazán",
+      "button": "Smazat",
+      "dialogTitle": "Opravdu chcete pokračovat?",
+      "dialogDesc": "Tuto akci nelze vrátit zpět. Tímto trvale smažete svůj účet a odeberete svá data (výdaje, kalendáře a nákupní seznamy). Rodinná data zůstanou nedotčená.",
+      "cancel": "Zrušit",
+      "continue": "Pokračovat"
+    }
+  },
+  "Donate": {
+    "title": "Podpořte Family App",
+    "subtitle": "Pokud vám aplikace pomáhá udržet rodinu organizovanou, drobný příspěvek mi pomůže ji dál rozvíjet.",
+    "p1": "Ahoj! Jsem Kryštof, tvůrce této aplikace. Vytvořil jsem ji, aby byl každodenní rodinný život jednodušší — kalendář, úkoly, nákupní seznamy, výdaje a další.",
+    "p2": "Projekt je zcela nezávislý. Vaše podpora mi pomáhá platit servery, přidávat nové funkce a udržet základ aplikace zdarma pro všechny.",
+    "p3": "Pokud se vám aplikace líbí, zvažte malou podporu. Opravdu to pro mě hodně znamená.",
+    "small": "Burrito 🌯",
+    "medium": "Snack do kina 🎬",
+    "large": "Večeře 🍽️",
+    "priceSmall": "125 Kč",
+    "priceMedium": "250 Kč",
+    "priceLarge": "500 Kč",
+    "buyUs": "Koupit",
+    "footer": "Každý příspěvek pomáhá udržet tento projekt naživu a růst. Děkujeme za vaši podporu!",
+    "successThanks": "Děkujeme! ❤️",
+    "successMessage": "Každý příspěvek pomáhá udržet tento projekt naživu a dál růst. Děkujeme za vaši podporu!",
+    "successBack": "Zpět do aplikace"
+  },
+  "Header": {
+    "title": "vRodině",
+    "account": "Můj účet",
+    "profile": "Profil",
+    "family": "Rodina",
+    "settings": "Nastavení",
+    "donate": "Přispět",
+    "logout": "Odhlásit"
+  },
+  "Sidebar": {
+    "sections": "Sekce",
+    "calendar": "Kalendář",
+    "shoppingList": "Nákupní seznam",
+    "homeDuties": "Domácí práce",
+    "expenses": "Výdaje",
+    "settings": "Nastavení",
+    "account": "Můj účet",
+    "profile": "Profil",
+    "family": "Rodina",
+    "logout": "Odhlásit",
+    "donate": "Přispět"
+  },
+  "Login": {
+    "title": "Přihlásit se",
+    "password": "Heslo",
+    "gmail": "E-mail",
+    "errorTitle": "Nelze zpracovat vaše přihlášení.",
+    "errorDesc": "Ověřte prosím svou e-mailovou adresu a zkuste to znovu.",
+    "errorRuleAt": "Ujistěte se, že zadáváte @",
+    "errorRuleTypos": "Zkontrolujte překlepy",
+    "emailPlaceholder": "E-mail",
+    "passwordPlaceholder": "Heslo",
+    "submitButton": "Přihlásit se",
+    "googleButton": "Přihlásit přes Google",
+    "noAccountText": "Nemáte účet?",
+    "signUpLink": "Registrovat se"
+  },
+  "FamilyChoose": {
+    "title": "Vybrat rodinu",
+    "createBtn": "Vytvořit rodinu",
+    "joinBtn": "Připojit se k rodině",
+    "familyNamePlaceholder": "Zadejte název rodiny",
+    "familyIdPlaceholder": "Zadejte kód rodiny",
+    "submitBtn": "Potvrdit",
+    "familyName": "Název rodiny",
+    "familyId": "Rodiné ID"
+  },
+  "SignUp": {
+    "title": "Vytvořit účet",
+    "namePlaceholder": "Vaše jméno",
+    "emailPlaceholder": "Váš e-mail",
+    "password": "Heslo",
+    "familyName": "Název rodiny",
+    "familyId": "Rodiné ID",
+    "name": "Jméno",
+    "gmail": "E-mail",
+    "passwordPlaceholder": "Heslo",
+    "createFamilyBtn": "Vytvořit rodinu",
+    "joinFamilyBtn": "Připojit se k rodině",
+    "familyNamePlaceholder": "Zadejte název rodiny",
+    "familyIdPlaceholder": "Zadejte ID rodiny",
+    "submitButton": "Registrovat se",
+    "googleButton": "Registrovat přes Google",
+    "alreadyAccount": "Máte již účet?",
+    "signInLink": "Přihlásit se",
+    "alert": {
+      "title": "Nelze zpracovat vaši registraci.",
+      "description": "Zadejte prosím platnou e-mailovou adresu a zkuste to znovu.",
+      "checkAt": "Ujistěte se, že zadáváte @",
+      "checkTypos": "Zkontrolujte překlepy"
+    }
+  },
+  "FamilyPage": {
+    "MEMBER": "Člen",
+    "ADMIN": "Správce",
+    "title": "Změnit jméno",
+    "desc": "Změňte své uživatelské jméno",
+    "titlePassword": "Změnit heslo",
+    "descPassword": "Změňte své heslo k účtu",
+    "loading": "Načítání…",
+    "error": "Chyba: {message}",
+    "noFamily": "Žádná rodina nenalezena",
+    "errorImage": "Nepodařilo se nahrát obrázek. Zkuste to prosím znovu.",
+
+    "familyId": {
+      "title": "ID rodiny",
+      "desc": "Sdílejte toto ID, aby se členové mohli připojit.",
+      "copy": "Kopírovat ID",
+      "copied": "Zkopírováno!"
+    },
+
+    "members": {
+      "title": "Členové",
+      "desc": "Lidé, kteří jsou součástí této rodiny.",
+      "you": "Ty",
+      "delete": "Smazat",
+      "makeAdmin": "Udělat Správcem",
+      "makeMember": "Udělat Členem",
+      "minAdmin": "Nemůžeš opustit rodinu, protože jsi jediný Správce.",
+      "isAdmin": "Uživatel je Správce",
+      "isMember": "Uživatel je Člen"
+    },
+
+    "invite": {
+      "title": "Pozvat členy",
+      "desc": "Pošlete pozvánku k připojení k této rodině.",
+      "button": "Pozvat"
+    },
+
+    "leave": {
+      "title": "Opustit rodinu",
+      "desc": "Budete odebráni z této rodiny.",
+      "button": "Odejít",
+      "dialogTitle": "Opravdu chcete odejít?",
+      "dialogDesc": "Ztratíte přístup ke kalendářům, nákupním seznamům, domácím úkolům a výdajům spojeným s touto rodinou.",
+      "cancel": "Zrušit",
+      "confirm": "Odejít"
+    }
+  },
+  "Error": {
+    "title": "Něco se pokazilo…",
+    "chillTitle": "Nebojte se — i v těch nejšťastnějších rodinách se občas něco nepovede. Nadechněte se, zkuste to znovu a my to společně dáme do pořádku. 💜",
+    "tryAgain": "Zkusit znovu",
+    "goHome": "Zpět na domovskou stránku"
+  },
+  "Expenses": {
+    "title": "Výdaje",
+    "info": "Sledujte a spravujte výdaje své rodiny snadno.",
+    "success": "Výdaj byl úspěšně přidán",
+    "error": "Vyplňte všechna pole",
+    "titleNotification": "Nová věc ve Výdajích!",
+    "added": "přidal",
+    "empty": "Žádná data",
+    "successUpdate": "Událost změněna",
+    "deleteMessage": "Položka byla odstraněna",
+    "additionalInfo": "Tvoje poslední výdaje",
+    "new": "Nový",
+    "Tutorial": {
+      "createEvent": {
+        "title": "Vytvořit událost",
+        "description": "Klepnutím na tlačítko Plus vytvoříte novou událost."
+      },
+      "select": {
+        "title": "Změna měny",
+        "description": "Přepínejte mezi různými měnami pro zobrazení výdajů ve vámi preferované jednotce."
+      },
+      "reportFilter": {
+        "title": "Filtrování přehledů",
+        "description": "Analyzujte data výběrem konkrétního člena rodiny a časového období jako týden, měsíc nebo rok."
+      }
+    },
+    "Card1": {
+      "spendMoney": "Utraceno za:",
+      "week": "Týden",
+      "month": "Měsíc",
+      "year": "Rok",
+      "totalSpend": "Celkem utraceno",
+      "all": "Vše"
+    },
+    "Card2": {
+      "chooseUser": "Vyber uživatele",
+      "spend": "Utratil"
+    },
+    "Table": {
+      "caption": "Žádné výdaje",
+      "name": "Název",
+      "price": "Cena",
+      "category": "Kategorie",
+      "who": "Plátce",
+      "date": "Datum",
+      "delete": "Smazat",
+      "save": "Uložit"
+    },
+    "category": {
+      "FOOD": "Jídlo",
+      "BILLS": "Účty",
+      "ENTERTAINMENT": "Zábava",
+      "TRANSPORT": "Doprava",
+      "HEALTH": "Zdraví",
+      "SHOPPING": "Nákupy",
+      "OTHER": "Jiné"
+    },
+    "popupWindow": {
+      "name": "Název",
+      "description": "Popis",
+      "amount": "Cena",
+      "namePlaceholder": "Mikina",
+      "descriptionPlaceholder": "Do školy",
+      "title": "Přidat nový výdaj",
+      "create": "Vytvořit",
+      "category": "Kategorie",
+      "when": "Kdy"
+    }
+  },
+  "HomeDuties": {
+    "title": "Domácí práce",
+    "info": "Sledujte a spravujte domácí povinnosti členů rodiny.",
+    "new": "Nový",
+    "assignTo": "Přiřadit",
+    "all": "Vše",
+    "titleNotification": "Nová věc v domácích povinnostech!",
+    "added": "přidal",
+    "delete": "Smazat",
+    "save": "Uložit",
+    "upcoming": "Nadcházející",
+    "overdue": "Po termínu",
+    "days": "Dny",
+    "updateMessage": "Upraveno",
+    "error": "Vyplňte všechna pole",
+    "allCompleted": "Všechny povinnosti splněny!",
+    "deleteMessage": "Úkol byl odstraněn",
+    "success": "Úkol byl úspěšně přidán",
+    "left": "Zbývající dny",
+    "noItem": "Žádné úkoly",
+    "Tutorial": {
+      "createEvent": {
+        "title": "Vytvořit událost",
+        "description": "Klepnutím na tlačítko Plus vytvoříte novou událost."
+      },
+      "select": {
+        "title": "Filtrovat podle osoby",
+        "description": "Vyberte člena rodiny pro zobrazení pouze jeho domácých poviností, nebo zobrazte všechny najednou."
+      }
+    },
+    "popupWindow": {
+      "name": "Název",
+      "description": "Popis",
+      "assignTo": "Pro koho",
+      "dueTo": "Do kdy",
+      "namePlaceholder": "Uklidit kuchyň",
+      "descriptionPlaceholder": "Co nejdříve",
+      "title": "Přidat nový úkol",
+      "create": "Vytvořit",
+      "today": "Dnes",
+      "tomorrow": "Zítra",
+      "week": "Tento týden",
+      "month": "Tento měsíc"
+    }
+  },
+  "ShopList": {
+    "title": "Nákupní seznam",
+    "info": "Tvůj seznam věcí, které plánuješ koupit",
+    "success": "Položka byla přidána do seznamu",
+    "description": "Popis",
+    "noItem": "Žádné položky",
+    "allCompleted": "Vše nakoupeno!",
+    "titleNotification": "Nová věc v nákupním košíku!",
+    "added": "přidal",
+    "delete": "Smazat",
+    "normalPriority": "Normální priorita",
+    "save": "Uložit",
+    "updateMessage": "Upraveno",
+    "deleteMessage": "Smazáno",
+    "addedMessage": "Položka byla přidána",
+    "descriptionPlaceholder": "Detaily...",
+    "Tutorial": {
+      "createEvent": {
+        "title": "Vytvořit událost",
+        "description": "Klepnutím na tlačítko Plus vytvoříte novou událost."
+      },
+      "select": {
+        "title": "Filtrování",
+        "description": "Použijte tyto možnosti pro filtrování položek podle kategorie nebo podle priority."
+      }
+    },
+    "category": {
+      "all": "Vše",
+      "FOOD": "Jídlo",
+      "CLOTHES": "Oblečení",
+      "ENTERTAINMENT": "Zábava",
+      "HEALTH": "Zdraví",
+      "HOUSE": "Domácnost",
+      "OTHER": "Jiné"
+    },
+    "name": "Název",
+    "categoryName": "Kategorie",
+    "priorityName": "Priorita",
+    "quantity": "Množství",
+    "new": "Nový",
+    "priority": {
+      "all": "Vše",
+      "HIGH": "Vysoká",
+      "NORMAL": "Normální",
+      "LOW": "Nízká"
+    }
+  },
+  "Calendar": {
+    "noEvents": "Žádné události",
+    "success": "Událost byla přidána",
+    "deleteMessage": "Událost byla odstraněna",
+    "titleNotification": "Nová událost v kalendíři!",
+    "added": "přidal",
+    "priority": "Priorita",
+    "deleteConfirmTitle": "Jste si jistý?",
+    "delete": "Smazat",
+    "deleteConfirmText": "Tuto akci nelze vrátit zpět. Událost bude trvale vymazána.",
+    "cancel": "Ne",
+    "confirm": "Ano, smazat",
+    "namePlaceholder": "Schůzka s týmem",
+    "Tutorial": {
+      "menu": {
+        "title": "Navigační menu",
+        "description": "Zde můžete přepínat mezi Kalendářem, Úkoly, Výdaji a Nákupy."
+      },
+      "family": {
+        "title": "Váš Účet",
+        "description": "Zde můžete spravovat členy rodiny nebo upravit vaše inforamce o účtě."
+      },
+      "profile": {
+        "title": "Uživatelský profil",
+        "description": "Zde najdete osobní nastavení, detaily profilu nebo možnost odhlášení."
+      },
+      "calendarTabs": {
+        "title": "Přepínání zobrazení",
+        "description": "Přepínejte mezi vizuálním kalendářem a seznamem nadcházejících událostí."
+      },
+      "createEvent": {
+        "title": "Vytvořit událost",
+        "description": "Klepnutím na tlačítko Plus vytvoříte novou událost, připomínku nebo narozeniny."
+      },
+      "navigation": {
+        "title": "Navigace v čase",
+        "description": "Tlačítka pro posun zpět, vpřed nebo skok přímo na dnešek."
+      },
+      "viewSelector": {
+        "title": "Rozvržení kalendáře",
+        "description": "Vyberte si preferovaný pohled: Den, Týden nebo Měsíc."
+      }
+    },
+    "priorityType": {
+      "low": "Nízká",
+      "normal": "Normální",
+      "high": "Vysoká"
+    },
+    "title": "Kalendář",
+    "titleInfo": "Spravujte rozvrh a události své rodiny",
+    "description": "Popis",
+    "allScheduled": "Kalendář",
+    "events": "Události",
+    "newEventButton": "Nový",
+    "today": "Dnes",
+    "updated": "Upraveno",
+    "day": "Den",
+    "color": "Barva",
+    "start": "Začátek",
+    "end": "Konec",
+    "pickDate": "Vyberte datum",
+    "save": "Uložit",
+    "endTimeBeforeStartTime": "Čas konce nemůže být před časem začátku ve stejný den",
+    "week": "Týden",
+    "month": "Měsíc",
+    "loadingEvents": "Načítání událostí...",
+    "errorLoadingEvents": "Nepodařilo se načíst události. Zkuste to prosím znovu.",
+    "mobileCalendar": {
+      "close": "Zavřít",
+      "info": "Žádné plány"
+    },
+    "months": {
+      "0": "Leden",
+      "1": "Únor",
+      "2": "Březen",
+      "3": "Duben",
+      "4": "Květen",
+      "5": "Červen",
+      "6": "Červenec",
+      "7": "Srpen",
+      "8": "Září",
+      "9": "Říjen",
+      "10": "Listopad",
+      "11": "Prosinec"
+    }
+  },
+  "EventPopup": {
+    "title": "Přidat novou událost",
+    "name": "Název",
+    "color": "Barva",
+    "namePlaceholder": "Schůzka s týmem",
+    "start": "Začátek",
+    "end": "Konec",
+    "endTimeBeforeStartTime": "Čas konce nemůže být před časem začátku ve stejný den",
+    "pickDate": "Vyberte datum",
+    "recurrence": "Opakování",
+    "recurrenceOptions": {
+      "oneTime": "Jednorázově",
+      "daily": "Denně",
+      "weekly": "Týdně",
+      "monthly": "Měsíčně",
+      "yearly": "Ročně"
+    },
+    "priority": "Priorita",
+    "priorityType": {
+      "low": "Nízká",
+      "normal": "Normální",
+      "high": "Vysoká"
+    },
+    "description": "Popis",
+    "descriptionPlaceholder": "Zadejte detaily události...",
+    "create": "Vytvořit",
+    "error": "Vyplňte všechna pole"
+  },
+  "EventPopupShopList": {
+    "title": "Přidat novou položku",
+    "name": "Název",
+    "namePlaceholder": "Banány",
+    "priority": "Priorita",
+    "quantity": "Množství",
+    "category": "Kategorie",
+    "priorityType": {
+      "low": "Nízká",
+      "normal": "Normální",
+      "high": "Vysoká"
+    },
+    "categoryType": {
+      "food": "Jídlo",
+      "clothes": "Oblečení",
+      "entertainment": "Zábava",
+      "health": "Zdraví",
+      "house": "Domácnost",
+      "other": "Jiné"
+    },
+    "description": "Popis",
+    "descriptionPlaceholder": "Zadejte detaily...",
+    "create": "Vytvořit",
+    "error": "Vyplňte všechna pole"
+  }
+}

@@ -1,0 +1,559 @@
+{
+  "HomePage": { "title": "Hello world!" },
+  "Nav": { "home": "Home", "about": "About" },
+  "Settings": {
+    "title": "Settings",
+    "Theme": {
+      "title": "Theme",
+      "desc": "Switch between light and dark mode",
+      "button": { "light": "Light", "dark": "Dark" }
+    },
+    "Language": {
+      "title": "Language",
+      "desc": "Choose your preferred language"
+    },
+    "Profile": {
+      "title": "Profile",
+      "desc": "Go to your profile settings",
+      "button": "Profile"
+    },
+    "ChangePassword": {
+      "title": "Change Password",
+      "desc": "Change your account password",
+      "button": "Change",
+      "dialogTitle": "Update Password",
+      "dialogDesc": "Enter your old password and set a new one.",
+      "oldPasswordPlaceholder": "Old password",
+      "newPasswordPlaceholder": "New password",
+      "confirmPasswordPlaceholder": "Confirm new password",
+      "cancel": "Cancel",
+      "submit": "Submit",
+      "success": "Password changed successfully",
+      "passwordMismatch": "Passwords do not match"
+    },
+    "Family": {
+      "title": "Family",
+      "desc": "Go to your family settings",
+      "button": "Family",
+      "deleteUser": "User deleted",
+      "makeAdmin": "User is now an Admin"
+    },
+    "titleNotification": "Notification",
+    "titleBody": "Notifications enabled successfully!",
+    "Notification": {
+      "title": "Notifications",
+      "desc": "Notifications on your phone",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "calendar": "Calendar",
+      "shopList": "Shop list",
+      "homeDuty": "House chores",
+      "expenses": "Expenses"
+    },
+    "Credit": {
+      "title": "About us",
+      "desc": "Who built this app?",
+      "infoAboutMe": "My name is Kryštof Marcol. I’m an 18-year-old student from the Czech Republic with a growing passion for technology and modern web development. I enjoy creating progressive web applications (PWAs) using Next.js, exploring new tools, and improving my skills through hands-on projects. Outside of coding, I love football and video games—they help me relax, stay creative, and keep a good balance between school and development.",
+      "contact": "Twitter",
+      "gmail": "E-mail",
+      "button": "About us",
+      "copied": "Copied",
+      "aboutApp": "About This App",
+      "features": "Key Features",
+
+      "appDescription1": "This application is designed to help families stay organized and connected every day.",
+      "appDescription2": "It centralizes all important family responsibilities such as events, chores, shopping tasks, and expenses in one simple and clean interface.",
+      "appDescription3": "The goal is to reduce everyday stress and help each family member clearly see what needs to be done.",
+
+      "featureCalendar": "Shared family calendar for all events",
+      "featureDuties": "Task and chore management",
+      "featureShopping": "Shared shopping lists",
+      "featureExpenses": "Family expense tracking",
+      "featureSync": "Real-time sync across all devices",
+      "featureNotifications": "Smart reminders and notifications",
+
+      "supportTitle": "About My Work",
+      "supportWays": "Ways You Can Support",
+
+      "supportText1": "I built this application as a personal project to help families stay organized, communicate better, and make daily life easier.",
+      "supportText2": "Every feature, page, and detail is handcrafted with care to create a clean and modern experience.",
+      "supportText3": "If this app helps you or your family, your support truly means a lot to me.",
+
+      "supportFeedback": "Share your feedback so I can keep improving the app",
+      "supportShare": "Share the app with friends, family, or other communities",
+      "supportDonate": "Support the project through a small donation if you wish",
+      "supportIdeas": "Suggest new features or improvements",
+
+      "donateButton": "Click here to support the project"
+    },
+    "ChangeName": {
+      "title": "Change name",
+      "desc": "Change your username",
+      "button": "Change",
+      "dialogTitle": "Change your name",
+      "dialogDesc": "Enter a new name below and click submit.",
+      "placeholder": "New name",
+      "cancel": "Cancel",
+      "submit": "Submit"
+    },
+    "Logout": {
+      "title": "Logout",
+      "desc": "Logout from your account",
+      "button": "Logout"
+    },
+    "DeleteAccount": {
+      "title": "Delete Account",
+      "desc": "Your account will be permanently deleted",
+      "button": "Delete",
+      "dialogTitle": "Are you absolutely sure?",
+      "dialogDesc": "This action cannot be undone. This will permanently delete your account and remove your data (expenses, calendars, and shopping lists). Family data will remain intact.",
+      "cancel": "Cancel",
+      "continue": "Continue"
+    }
+  },
+  "Donate": {
+    "title": "Support the Family App",
+    "subtitle": "If this app helps your family stay organized, a small donation helps me keep building it with love.",
+    "p1": "Hi! I'm Kryštof, the creator of this app. I built it to make daily family life easier — calendars, chores, shopping lists, expenses and more.",
+    "p2": "This project is fully independent. Your support helps me maintain servers, add new features, and keep the core of this app free for everyone.",
+    "p3": "If you enjoy using it, consider supporting it with a small donation. It truly means a lot.",
+    "small": "Burrito 🌯",
+    "medium": "Movie-night snack 🎬",
+    "large": "Dinner 🍽️",
+    "priceSmall": "5€",
+    "priceMedium": "10€",
+    "priceLarge": "20€",
+    "buyUs": "Buy",
+    "footer": "Every contribution helps keep this project alive and growing. Thank you for your support!",
+    "successThanks": "Thank you! ❤️",
+    "successMessage": "Every contribution helps keep this project alive and growing. Thank you for your support!",
+    "successBack": "Back to app"
+  },
+  "Header": {
+    "title": "inFamily",
+    "account": "My Account",
+    "profile": "Profile",
+    "family": "Family",
+    "settings": "Settings",
+    "donate": "Donate",
+    "logout": "Logout"
+  },
+  "Sidebar": {
+    "sections": "Sections",
+    "calendar": "Calendar",
+    "shoppingList": "Shopping List",
+    "homeDuties": "Chores",
+    "expenses": "Expenses",
+    "settings": "Settings",
+    "account": "My Account",
+    "profile": "Profile",
+    "family": "Family",
+    "logout": "Logout",
+    "donate": "Donate"
+  },
+  "Login": {
+    "title": "Sign In",
+    "password": "Password",
+    "gmail": "E-mail",
+    "errorTitle": "Unable to process your login.",
+    "errorDesc": "Please verify your email address and try again.",
+    "errorRuleAt": "Ensure you include @",
+    "errorRuleTypos": "Verify there are no typos",
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Password",
+    "submitButton": "Login",
+    "googleButton": "Login with Google",
+    "noAccountText": "Don’t have an account?",
+    "signUpLink": "Sign Up"
+  },
+  "FamilyChoose": {
+    "title": "Select Family",
+    "createBtn": "Create Family",
+    "joinBtn": "Join Family",
+    "familyNamePlaceholder": "Enter Family Name",
+    "familyIdPlaceholder": "Enter Family Code",
+    "submitBtn": "Submit",
+    "familyName": "Family name",
+    "familyId": "Family ID"
+  },
+  "SignUp": {
+    "title": "Create Account",
+    "namePlaceholder": "Your Name",
+    "password": "Password",
+    "name": "Name",
+    "familyName": "Family name",
+    "familyId": "Family ID",
+    "gmail": "E-mail",
+    "emailPlaceholder": "Your Email",
+    "passwordPlaceholder": "Password",
+    "createFamilyBtn": "Create Family",
+    "joinFamilyBtn": "Join Family",
+    "familyNamePlaceholder": "Enter Family Name",
+    "familyIdPlaceholder": "Enter Family ID",
+    "submitButton": "Sign Up",
+    "googleButton": "Sign up with Google",
+    "alreadyAccount": "Already have an account?",
+    "signInLink": "Sign In",
+    "alert": {
+      "title": "Unable to process your sign up.",
+      "description": "Please insert valid email address and try again.",
+      "checkAt": "Ensure you include @",
+      "checkTypos": "Verify there are no typos"
+    }
+  },
+  "FamilyPage": {
+    "ADMIN": "Admin",
+    "MEMBER": "Member",
+    "title": "Change name",
+    "desc": "Change your username",
+    "titlePassword": "Change Password",
+    "descPassword": "Change your account password",
+    "loading": "Loading…",
+    "error": "Error: {message}",
+    "noFamily": "No family found",
+    "errorImage": "Failed to upload image. Please try again.",
+
+    "familyId": {
+      "title": "Family ID",
+      "desc": "Share this ID so members can join.",
+      "copy": "Copy ID",
+      "copied": "Copied!"
+    },
+
+    "members": {
+      "title": "Members",
+      "desc": "People who are part of this family.",
+      "you": "You",
+      "delete": "Delete",
+      "makeAdmin": "Make Admin",
+      "makeMember": "Make Member",
+      "minAdmin": "You cannot leave the family because you are the only Admin.",
+      "isAdmin": "User is Admin",
+      "isMember": "User is Member"
+    },
+
+    "invite": {
+      "title": "Invite Members",
+      "desc": "Send an invitation to join this family.",
+      "button": "Invite"
+    },
+
+    "leave": {
+      "title": "Leave Family",
+      "desc": "You will be removed from this family.",
+      "button": "Leave",
+      "dialogTitle": "Leave Family?",
+      "dialogDesc": "You will lose access to calendars, shopping lists, chores, and expenses associated with this family.",
+      "cancel": "Cancel",
+      "confirm": "Leave"
+    }
+  },
+  "Error": {
+    "title": "Something went wrong…",
+    "chillTitle": "Don’t worry — even in the happiest families, small mistakes happen. Take a breath, try again, and we’ll get things back on track. 💜",
+    "tryAgain": "Try Again",
+    "goHome": "Go Home"
+  },
+  "Expenses": {
+    "title": "Expenses",
+    "info": "Keep track of your family's spending and budget.",
+    "success": "Expense added successfully",
+    "titleNotification": "New Expenses event!",
+    "added": "added",
+    "error": "Please fill all fields",
+    "successUpdate": "Event was changed",
+    "deleteMessage": "Expense deleted",
+    "additionalInfo": "Your last expenses",
+    "empty": "No data",
+    "new": "New",
+    "Tutorial": {
+      "createEvent": {
+        "title": "Create New Event",
+        "description": "Tap the Plus button to create a new event."
+      },
+      "select": {
+        "title": "Change Currency",
+        "description": "Switch between different currencies to view expenses in your preferred unit."
+      },
+      "reportFilter": {
+        "title": "Filter Reports",
+        "description": "Analyze data by selecting a specific family member and a time range like week, month, or year."
+      }
+    },
+    "Card1": {
+      "spendMoney": "Money spent in:",
+      "week": "Week",
+      "month": "Month",
+      "year": "Year",
+      "totalSpend": "Total spent",
+      "all": "All"
+    },
+    "Card2": {
+      "chooseUser": "Choose user",
+      "spend": "Spent"
+    },
+    "Table": {
+      "caption": "There are no expenses",
+      "name": "Name",
+      "price": "Price",
+      "category": "Category",
+      "who": "Spender",
+      "date": "Date",
+      "delete": "Delete",
+      "save": "Save"
+    },
+    "category": {
+      "FOOD": "Food",
+      "BILLS": "Bills",
+      "ENTERTAINMENT": "Entertainment",
+      "TRANSPORT": "Transport",
+      "HEALTH": "Health",
+      "SHOPPING": "Shopping",
+      "OTHER": "Other"
+    },
+    "popupWindow": {
+      "name": "Name",
+      "description": "Description",
+      "namePlaceholder": "Hoodie",
+      "amount": "Price",
+      "descriptionPlaceholder": "For school",
+      "title": "Add New Expense",
+      "create": "Create",
+      "category": "Category",
+      "when": "When"
+    }
+  },
+  "HomeDuties": {
+    "title": "Chores",
+    "info": "Track and manage your family's household chores.",
+    "new": "New",
+
+    "titleNotification": "New House chores event!",
+    "added": "added",
+    "error": "Please fill all fields",
+    "success": "Task successfully added",
+    "allCompleted": "All chores completed!",
+    "deleteMessage": "Task deleted",
+    "all": "All",
+    "upcoming": "Upcoming",
+    "overdue": "Overdue",
+    "delete": "Delete",
+    "updateMessage": "Updated",
+
+    "save": "Save",
+    "days": "Days",
+    "left": "Days left",
+    "noItem": "No items",
+    "Tutorial": {
+      "createEvent": {
+        "title": "Create New Event",
+        "description": "Tap the Plus button to create a new event."
+      },
+      "select": {
+        "title": "Filter by Person",
+        "description": "Select a family member to see only their chores, or view everyone at once."
+      }
+    },
+    "popupWindow": {
+      "name": "Name",
+      "description": "Description",
+      "assignTo": "Assign to",
+      "dueTo": "Due date",
+      "namePlaceholder": "Do dishes",
+      "descriptionPlaceholder": "As soon as possible",
+      "title": "Add New Chore",
+      "create": "Create",
+      "today": "Today",
+      "tomorrow": "Tomorrow",
+      "week": "This Week",
+      "month": "This Month"
+    }
+  },
+  "ShopList": {
+    "title": "Shopping List",
+    "info": "Your go-to list for everything you plan to buy",
+    "success": "Item successfully added to shopping list",
+    "description": "Description",
+    "titleNotification": "New Shop list event!",
+    "added": "added",
+    "noItem": "No items",
+    "delete": "Delete",
+    "allCompleted": "All items bought!",
+    "descriptionPlaceholder": "Details...",
+    "save": "Save",
+    "normalPriority": "Normal priority",
+    "updateMessage": "Updated",
+    "deleteMessage": "Successfully deleted",
+    "addedMessage": "Item successfully added",
+    "Tutorial": {
+      "createEvent": {
+        "title": "Create New Event",
+        "description": "Tap the Plus button to create a new event."
+      },
+      "select": {
+        "title": "Filter",
+        "description": "Use these options to filter items by category or by priority."
+      }
+    },
+    "category": {
+      "all": "All",
+      "FOOD": "Food",
+      "CLOTHES": "Clothes",
+      "ENTERTAINMENT": "Entertainment",
+      "HEALTH": "Health",
+      "HOUSE": "House",
+      "OTHER": "Other"
+    },
+
+    "name": "Name",
+    "categoryName": "Category",
+    "priorityName": "Priority",
+    "quantity": "Quantity",
+    "new": "New",
+    "priority": {
+      "all": "All",
+      "HIGH": "High",
+      "NORMAL": "Normal",
+      "LOW": "Low"
+    }
+  },
+  "Calendar": {
+    "noEvents": "No events",
+    "titleNotification": "New calendar event!",
+    "added": "added",
+    "success": "Event added",
+    "deleteMessage": "Event deleted",
+    "priority": "Priority",
+    "deleteConfirmTitle": "Are you sure?",
+    "delete": "Delete",
+    "deleteConfirmText": "This action cannot be undone. The event will be permanently deleted.",
+    "cancel": "No",
+    "confirm": "Yes, delete",
+    "Tutorial": {
+      "menu": {
+        "title": "Navigation Menu",
+        "description": "Click here to switch between Calendar, Chores, Expenses, and Shopping."
+      },
+      "family": {
+        "title": "Profile Page",
+        "description": "Tap here to manage family members or your account."
+      },
+      "profile": {
+        "title": "User Profile",
+        "description": "Access your personal settings, profile details, or log out here."
+      },
+      "calendarTabs": {
+        "title": "Switch Views",
+        "description": "Toggle between the visual Calendar view and a list of Upcoming Events."
+      },
+      "createEvent": {
+        "title": "Create New Event",
+        "description": "Tap the Plus button to create a new event, reminder, or birthday."
+      },
+      "navigation": {
+        "title": "Time Travel",
+        "description": "Use these buttons to go back, forward, or jump straight to Today."
+      },
+      "viewSelector": {
+        "title": "Calendar Layout",
+        "description": "Choose your preferred view: Day, Week, or Month."
+      }
+    },
+    "priorityType": {
+      "low": "Low",
+      "normal": "Normal",
+      "high": "High"
+    },
+    "title": "Calendar",
+    "titleInfo": "Manage your family’s schedule and events",
+    "description": "Description",
+    "allScheduled": "Calendar",
+    "events": "Events",
+    "newEventButton": "New",
+    "today": "Today",
+    "namePlaceholder": "Meeting with team",
+    "day": "Day",
+    "color": "Color",
+    "week": "Week",
+    "start": "Start",
+    "pickDate": "Pick a date",
+    "updated": "Successfully updated",
+    "save": "Save",
+    "endTimeBeforeStartTime": "End time cannot be before start time on the same day",
+    "end": "End",
+    "month": "Month",
+    "loadingEvents": "Loading events...",
+    "errorLoadingEvents": "Failed to load events. Please try again later.",
+    "mobileCalendar": {
+      "close": "Close",
+      "info": "No events scheduled"
+    },
+    "months": {
+      "0": "January",
+      "1": "February",
+      "2": "March",
+      "3": "April",
+      "4": "May",
+      "5": "June",
+      "6": "July",
+      "7": "August",
+      "8": "September",
+      "9": "October",
+      "10": "November",
+      "11": "December"
+    }
+  },
+  "EventPopup": {
+    "title": "Add New Event",
+    "name": "Name",
+    "color": "Color",
+    "namePlaceholder": "Meeting with team",
+    "start": "Start",
+    "endTimeBeforeStartTime": "End time cannot be before start time on the same day",
+    "end": "End",
+    "pickDate": "Pick a date",
+    "recurrence": "Recurrence",
+    "recurrenceOptions": {
+      "oneTime": "One Time",
+      "daily": "Daily",
+      "weekly": "Weekly",
+      "monthly": "Monthly",
+      "yearly": "Yearly"
+    },
+    "priority": "Priority",
+    "priorityType": {
+      "low": "Low",
+      "normal": "Normal",
+      "high": "High"
+    },
+    "description": "Description",
+    "descriptionPlaceholder": "Enter event details...",
+    "create": "Create",
+    "error": "Please fill all fields"
+  },
+  "EventPopupShopList": {
+    "title": "Add New Item",
+    "name": "Name",
+    "namePlaceholder": "Bananas",
+    "priority": "Priority",
+    "quantity": "Quantity",
+    "category": "Category",
+    "priorityType": {
+      "low": "Low",
+      "normal": "Normal",
+      "high": "High"
+    },
+    "categoryType": {
+      "food": "Food",
+      "clothes": "Clothes",
+      "entertainment": "Entertainment",
+      "health": "Health",
+      "house": "House",
+      "other": "Other"
+    },
+    "description": "Description",
+    "descriptionPlaceholder": "Enter item details...",
+    "create": "Create",
+    "error": "Please fill all fields"
+  }
+}

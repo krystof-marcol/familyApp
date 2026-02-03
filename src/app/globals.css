@@ -1,0 +1,408 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@tailwind utilities;
+
+@layer utilities {
+  .heading {
+    @apply flex items-center justify-center text-2xl font-bold;
+  }
+}
+
+html {
+  background-color: #000;
+}
+
+html.light {
+  background-color: #fff;
+}
+html.dark {
+  background-color: #000;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Custom Purple Colors */
+  --color-dark-purple: oklch(0.25 0.15 300);
+  --color-dark-purple-foreground: oklch(0.95 0 0);
+
+  --color-royal-purple: oklch(0.45 0.22 295);
+  --color-royal-purple-foreground: oklch(0.95 0 0);
+
+  --color-light-purple: oklch(0.75 0.12 300);
+  --color-light-purple-foreground: oklch(0.15 0 0);
+
+  /* Status Colors */
+  --color-success: oklch(0.65 0.15 145);
+  --color-success-foreground: oklch(1 0 0);
+
+  --color-warning: oklch(0.78 0.20 85);
+  --color-warning-foreground: oklch(0.15 0 0);
+
+  --color-error: oklch(0.62 0.25 25);
+  --color-error-foreground: oklch(1 0 0);
+
+  --color-info: oklch(0.72 0.20 240);
+  --color-info-foreground: oklch(1 0 0);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+
+  /* EVENTS COLORS */
+  --color1: oklch(0.58 0.16 255);
+  --color2: oklch(0.55 0.14 145);
+  --color3: oklch(0.65 0.16 50);
+  --color4: oklch(0.55 0.18 15);
+  --color5: oklch(0.55 0.18 300);
+  --color6: oklch(0.45 0.05 250);
+
+  /* CIRCLE GRAPH COLORS */
+  --color_graph1: oklch(0.42 0.18 300); /* Deep Violet */
+  --color_graph2: oklch(0.45 0.17 285); /* Royal Purple */
+  --color_graph3: oklch(0.48 0.16 270); /* Indigo */
+  --color_graph4: oklch(0.50 0.15 250); /* Blue Indigo */
+  --color_graph5: oklch(0.52 0.14 235); /* Muted Blue */
+  --color_graph6: oklch(0.55 0.13 220); /* Cool Sky Blue */
+  --color_graph7: oklch(0.38 0.04 260); /* Deep Graphite Gray (neutral anchor) */
+
+  /* BACKGROUND FOR CIRCLE */
+  --background_circle: oklch(0.635 0.092 289.409); /* Medium Royal Purple */
+  --color_circle_shadow: oklch(0.30 0.15 285); /* Deep Vibrant Purple Shadow */
+
+
+
+
+  /*SHADOW HOMEDUTY*/
+  --shadow-home: oklch(0.55 0.09 295 / 0.5);
+
+  /* PRIMARY = DARK PURPLE */
+  --primary: oklch(0.25 0.15 300);
+  --primary-foreground: oklch(0.95 0 0);
+
+  /* SECONDARY = ROYAL PURPLE */
+  --secondary: oklch(0.45 0.22 295);
+  --secondary-foreground: oklch(0.95 0 0);
+
+  /* MUTED = LIGHT PURPLE TINT */
+  --muted: oklch(0.96 0.02 300);
+  --muted-foreground: oklch(0.556 0 0);
+
+  /* ACCENT = ROYAL PURPLE */
+  --accent: oklch(0.45 0.22 295);
+  --accent-foreground: oklch(0.95 0 0);
+
+  --destructive: oklch(0.62 0.25 25);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+
+  /* RING = DARK PURPLE */
+  --ring: oklch(0.25 0.15 300);
+
+  /* CHARTS = PURPLE VARIATIONS */
+  --chart-1: oklch(0.25 0.15 300);  /* Dark purple */
+  --chart-2: oklch(0.45 0.22 295);  /* Royal purple */
+  --chart-3: oklch(0.35 0.18 285);  /* Deep purple */
+  --chart-4: oklch(0.55 0.25 305);  /* Medium purple */
+  --chart-5: oklch(0.65 0.20 290);  /* Light purple */
+
+  /* SIDEBAR = PURPLE THEME */
+  --sidebar: oklch(0.98 0.01 300);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.25 0.15 300);
+  --sidebar-primary-foreground: oklch(0.95 0 0);
+  --sidebar-accent: oklch(0.96 0.02 300);
+  --sidebar-accent-foreground: oklch(0.25 0.15 300);
+  --sidebar-border: oklch(0.90 0.02 300);
+  --sidebar-ring: oklch(0.25 0.15 300);
+}
+
+.dark {
+  --background: oklch(0.08 0.02 300);  /* Very dark purple background */
+  --foreground: oklch(0.95 0 0);
+  --card: oklch(0.12 0.05 300);        /* Dark purple card */
+  --card-foreground: oklch(0.95 0 0);
+  --popover: oklch(0.12 0.05 300);
+  --popover-foreground: oklch(0.95 0 0);
+
+  /* EVENTS COLORS */
+  --color1: oklch(0.65 0.16 255);
+  --color2: oklch(0.62 0.14 145);
+  --color3: oklch(0.70 0.16 50);
+  --color4: oklch(0.62 0.18 15);
+  --color5: oklch(0.62 0.18 300);
+  --color6: oklch(0.55 0.05 250);
+
+  /* CIRCLE GRAPH COLORS */
+
+  --color_graph1: oklch(0.32 0.12 300);
+  --color_graph2: oklch(0.35 0.12 285);
+  --color_graph3: oklch(0.38 0.11 270);
+  --color_graph4: oklch(0.40 0.10 250);
+  --color_graph5: oklch(0.42 0.09 235);
+  --color_graph6: oklch(0.45 0.09 220);
+  --color_graph7: oklch(0.28 0.03 260);
+
+  /* BACKGROUND FOR CIRCLE */
+  --background_circle: oklch(0.63 0.051 291.61); /* Rich Dark Purple */
+  --color_circle_shadow: oklch(0.25 0.13 285); /* Stronger Deep Purple Shadow */
+
+
+
+  /* PRIMARY = LIGHTER PURPLE IN DARK MODE */
+  --primary: oklch(0.55 0.25 295);
+  --primary-foreground: oklch(0.05 0 0);
+
+  /* SECONDARY = MEDIUM PURPLE */
+  --secondary: oklch(0.35 0.18 285);
+  --secondary-foreground: oklch(0.95 0 0);
+
+  /* MUTED = DARK PURPLE MUTED */
+  --muted: oklch(0.18 0.08 300);
+  --muted-foreground: oklch(0.708 0 0);
+
+  /* ACCENT = BRIGHT PURPLE */
+  --accent: oklch(0.65 0.20 290);
+  --accent-foreground: oklch(0.05 0 0);
+
+  --destructive: oklch(0.70 0.19 22);
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.55 0.25 295);
+
+  /* DARK MODE CHARTS = BRIGHTER PURPLES */
+  --chart-1: oklch(0.55 0.25 295);  /* Bright purple */
+  --chart-2: oklch(0.65 0.20 290);  /* Light purple */
+  --chart-3: oklch(0.45 0.22 285);  /* Royal purple */
+  --chart-4: oklch(0.75 0.15 305);  /* Very light purple */
+  --chart-5: oklch(0.35 0.18 280);  /* Deep purple */
+
+  /* DARK SIDEBAR = DARK PURPLE THEME */
+  --sidebar: oklch(0.10 0.03 300);
+  --sidebar-foreground: oklch(0.95 0 0);
+  --sidebar-primary: oklch(0.55 0.25 295);
+  --sidebar-primary-foreground: oklch(0.05 0 0);
+  --sidebar-accent: oklch(0.18 0.08 300);
+  --sidebar-accent-foreground: oklch(0.95 0 0);
+  --sidebar-border: oklch(1 0 0 / 8%);
+  --sidebar-ring: oklch(0.55 0.25 295);
+}
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* CALENDAR STYLES */
+
+.fc {
+  @apply rounded-lg overflow-hidden bg-white text-black dark:bg-black dark:text-gray-300 transition-colors;
+  --fc-page-bg-color: #ffffff;
+  --fc-border-color: #e5e7eb;
+}
+
+html.dark .fc {
+  --fc-page-bg-color: #000000;
+  --fc-border-color: #374151;
+}
+
+.fc .fc-scrollgrid,
+.fc .fc-scrollgrid-section {
+  @apply bg-white dark:bg-black;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+  @apply border border-gray-200 dark:border-gray-700;
+}
+.fc .fc-timegrid-slot {
+  @apply bg-white dark:bg-black;
+}
+
+.fc .fc-highlight {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+.fc-timegrid-slot-minor {
+  border-top: none !important;
+}
+
+.fc .fc-col-header-cell {
+  @apply bg-white dark:bg-black;
+}
+
+.fc .fc-col-header-cell-cushion {
+  @apply font-medium text-sm p-2 text-gray-900 dark:text-gray-300;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  @apply bg-white dark:bg-black;
+}
+
+.fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-number {
+  @apply inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white m-1;
+}
+
+.fc .fc-timegrid-axis-cushion,
+.fc .fc-col-header-cell.fc-timegrid-axis {
+  @apply bg-white dark:bg-black;
+}
+
+.fc .fc-timegrid-axis {
+  background: white !important;
+}
+
+html.dark .fc .fc-timegrid-axis {
+  background: black !important;
+}
+
+.fc-event {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 1px 2px !important;
+}
+
+.fc-event-main {
+  padding: 0 !important;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+}
+
+.fc-event-title, .fc-event-time {
+  display: none !important;
+}
+
+.fc .fc-timegrid-now-indicator-line {
+  border-color:  #833af0 !important;
+
+}
+.fc .fc-timegrid-now-indicator-arrow {
+  border-color: transparent transparent transparent #833af0 !important;
+}
+
+/* GRAPHS */
+
+.recharts-wrapper:focus,
+.recharts-surface:focus,
+.recharts-responsive-container:focus {
+  outline: none !important;
+}
+
+/* remove focus outline everywhere */
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* remove iOS/Android tap highlight */
+.recharts-wrapper,
+.recharts-wrapper * {
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* CALENDAR */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* TUTORIAL */
+
+/* Custom Theme for Driver.js Popups */
+.driverjs-theme {
+  background-color: hsl(var(--card));
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+  border-radius: 12px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.driverjs-theme .driver-popover-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.driverjs-theme .driver-popover-description {
+  font-size: 0.9rem;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 1rem;
+}
+
+/* Style the 'Next' and 'Done' buttons */
+.driverjs-theme .driver-popover-footer button {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  text-shadow: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.driverjs-theme .driver-popover-footer button:hover {
+  opacity: 0.9;
+}
+
+/* Style the 'Close' X button */
+.driverjs-theme .driver-popover-close-btn {
+  color: hsl(var(--muted-foreground));
+}
+
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}

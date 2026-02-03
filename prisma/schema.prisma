@@ -1,0 +1,141 @@
+generator client {
+ provider = "prisma-client-js"
+}
+
+datasource db {
+ provider = "postgresql"
+ url      = env("DATABASE_URL")
+}
+
+model Family {
+ id         String     @id @default(uuid())
+ name       String
+ members    User[]
+ calendars  Calendar[]
+ shopLists  ShopList[]
+ homeDuties HomeDuty[]
+ expenses   Expense[]
+}
+
+model User {
+ id            String   @id @default(cuid())
+ name          String
+ gmail         String   @unique
+ password      String?
+ provider      String
+ imageUrl      String?
+ role          Role
+ colorTheme    String   @default("light")
+ language      String   @default("en")
+ notification  Boolean  @default(false)
+ notifyCalendar  Boolean @default(true)
+ notifyShopList  Boolean @default(true)
+ notifyHomeDuty  Boolean @default(true)
+ notifyExpenses  Boolean @default(false)
+ constCurrency Currency @default(EUR)
+ family        Family?  @relation(fields: [familyId], references: [id])
+ familyId      String?
+ pushSubscription Json?
+
+ Calendar Calendar[] @relation("CalendarUsers")
+ ShopList ShopList[] @relation("ShopListUsers")
+ HomeDuty HomeDuty[] @relation("HomeDutyUsers")
+ Expense  Expense[]
+}
+
+model Calendar {
+ id            String         @id @default(uuid())
+ name          String
+ dateTimeStart DateTime
+ dateTimeEnd   DateTime
+ description   String?
+ color         String?
+ recurrence    RecurrenceType @default(ONE_TIME)
+ priority      PriorityType   @default(NORMAL)
+ users         User[]         @relation("CalendarUsers")
+ familyId      String
+ family        Family         @relation(fields: [familyId], references: [id])
+}
+
+model ShopList {
+ id          String           @id @default(uuid())
+ name        String
+ description String?
+ quantity    Int?
+ priority    PriorityType     @default(NORMAL)
+ category    ShopListCategory @default(FOOD)
+ users       User[]           @relation("ShopListUsers")
+ familyId    String
+ family      Family           @relation(fields: [familyId], references: [id])
+}
+
+model HomeDuty {
+ id          String    @id @default(uuid())
+ name        String
+ description String?
+ assignTo    String
+ dueTo       DateTime?
+ users       User[]    @relation("HomeDutyUsers")
+ recurrence  RecurrenceType @default(ONE_TIME)
+ familyId    String
+ family      Family    @relation(fields: [familyId], references: [id])
+}
+
+model Expense {
+ id       String          @id @default(uuid())
+ name     String
+ amount   Float
+ currency Currency
+ date     DateTime
+ note     String?
+ category ExpenseCategory
+ userId   String
+ user     User            @relation(fields: [userId], references: [id])
+ familyId String
+ family   Family          @relation(fields: [familyId], references: [id])
+}
+
+enum Role {
+ ADMIN
+ LEADER
+ MEMBER
+}
+
+enum RecurrenceType {
+ ONE_TIME
+ DAILY
+ WEEKLY
+ MONTHLY
+ YEARLY
+}
+
+enum ExpenseCategory {
+ FOOD
+ BILLS
+ TRANSPORT
+ SHOPPING
+ HEALTH
+ ENTERTAINMENT
+ OTHER
+}
+
+enum ShopListCategory {
+ FOOD
+ CLOTHES
+ ENTERTAINMENT
+ HEALTH
+ HOUSE
+ OTHER
+}
+
+enum PriorityType {
+ HIGH
+ NORMAL
+ LOW
+}
+
+enum Currency {
+ USD
+ EUR
+ CZK
+}
