@@ -7,14 +7,14 @@ const withNextIntl = createNextIntlPlugin();
 const withPWA = withPWAInit({
   dest: "public",
   register: true,
-  disable: process.env.NODE_ENV === "development",
+  disable: false,
   workboxOptions: {
     disableDevLogs: false,
     skipWaiting: true,
     clientsClaim: true,
+    importScripts: ["/custom-sw.js"],
     runtimeCaching: [
       {
-        // change url to match original
         urlPattern: /.*\/api\/.*/i,
         handler: "NetworkFirst",
         options: {
@@ -38,13 +38,13 @@ const withPWA = withPWAInit({
         },
       },
       {
-        urlPattern: /\/_next\/image\?url=.*/i,
-        handler: "StaleWhileRevalidate",
+        urlPattern: /\.(?:png|jpg|jpeg|svg|gif|webp)$/i,
+        handler: "CacheFirst",
         options: {
-          cacheName: "next-image-cache",
+          cacheName: "static-image-assets",
           expiration: {
-            maxEntries: 64,
-            maxAgeSeconds: 60 * 60 * 24,
+            maxEntries: 60,
+            maxAgeSeconds: 30 * 24 * 60 * 60,
           },
         },
       },

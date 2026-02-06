@@ -13,7 +13,7 @@ export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
   if (
     pathname.includes("manifest.json") ||
-    pathname.includes("sw.js") ||
+    pathname.includes("custom-sw.js") ||
     pathname.includes("workbox-") ||
     pathname.endsWith(".png") ||
     pathname.endsWith(".jpg") ||
