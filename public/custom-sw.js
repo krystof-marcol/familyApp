@@ -1,3 +1,4 @@
+console.log("Service Worker: Custom SW has loaded!");
 self.addEventListener("push", function (event) {
   if (event.data) {
     const data = event.data.json();
