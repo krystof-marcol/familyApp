@@ -11,16 +11,11 @@ const intlMiddleware = createMiddleware({
 
 export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
-  if (
-    pathname.includes("manifest.json") ||
-    pathname.includes("custom-sw.js") ||
-    pathname.includes("workbox-") ||
-    pathname.endsWith(".png") ||
-    pathname.endsWith(".jpg") ||
-    pathname.endsWith(".ico")
-  ) {
+
+  if (req.method === "OPTIONS") {
     return NextResponse.next();
   }
+
   const token = await getToken({ req });
   if (pathname === "/") {
     if (token) {
@@ -29,8 +24,17 @@ export async function middleware(req: NextRequest) {
       return NextResponse.redirect(new URL("/auth/signup", req.url));
     }
   }
-  return intlMiddleware(req);
+
+  if (
+    pathname === "/" ||
+    pathname.startsWith("/en") ||
+    pathname.startsWith("/cz")
+  ) {
+    return intlMiddleware(req);
+  }
+  return NextResponse.next();
 }
+
 export const config = {
-  matcher: ["/", "/(en|cz)/:path*"],
+  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
 };
