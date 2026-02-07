@@ -10,8 +10,8 @@ import { getServerSession } from "next-auth";
 import { AlertProvider } from "@/components/logic/AlertProvider";
 import { AlertContainer } from "@/components/logic/AlertContainer";
 import ClientAppShell from "@/components/ClientAppShell";
-import ServiceWorkerRegister from "@/components/logic/ServiceWorkerRegister";
 import Providers from "@/components/logic/providers";
+import RegisterPWA from "@/components/logic/RegisterPWA";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -59,10 +59,10 @@ export default async function RootLayout({
     <html lang={locale} className={poppins.variable} suppressHydrationWarning>
       <body className={poppins.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <ServiceWorkerRegister />
           <Providers>
             <ApolloWrapper>
               <NextAuthSessionProvider>
+                <RegisterPWA />
                 <ClientAppShell user={user}>
                   <AlertProvider>
                     <AlertContainer />
