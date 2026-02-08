@@ -13,7 +13,14 @@ export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   if (req.method === "OPTIONS") {
-    return NextResponse.next();
+    return new NextResponse(null, {
+      status: 200,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      },
+    });
   }
 
   const token = await getToken({ req });

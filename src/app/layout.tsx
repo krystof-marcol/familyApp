@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: "default",
     title: "Family App",
+    startupImage: "/family-icon-192.png",
   },
 };
 

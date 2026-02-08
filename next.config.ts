@@ -15,6 +15,18 @@ const withPWA = withPWAInit({
     importScripts: ["/custom-sw.js"],
     runtimeCaching: [
       {
+        urlPattern: ({ url, request }) =>
+          url.pathname.includes("graphql") || request.method === "POST",
+        handler: "NetworkOnly",
+        options: {
+          backgroundSync: {
+            name: "graphql-sync",
+            options: { maxRetentionTime: 60 },
+          },
+          precacheFallback: { fallbackURL: "/" },
+        },
+      },
+      {
         urlPattern: ({ request }) => request.mode === "navigate",
         handler: "NetworkFirst",
         options: {
@@ -30,9 +42,8 @@ const withPWA = withPWAInit({
         },
       },
       {
-        urlPattern: ({ url, request }) => {
-          return url.pathname.includes("/api/") && request.method === "GET";
-        },
+        urlPattern: ({ url, request }) =>
+          url.pathname.includes("/api/") && request.method === "GET",
         handler: "NetworkFirst",
         options: {
           cacheName: "api-data-cache",
