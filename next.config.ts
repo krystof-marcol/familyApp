@@ -28,14 +28,13 @@ const withPWA = withPWAInit({
       },
       {
         urlPattern: ({ request }) => request.mode === "navigate",
-        handler: "NetworkFirst",
+        handler: "StaleWhileRevalidate",
         options: {
           cacheName: "pages",
           expiration: {
             maxEntries: 50,
             maxAgeSeconds: 24 * 60 * 60,
           },
-          networkTimeoutSeconds: 10,
           cacheableResponse: {
             statuses: [0, 200],
           },
