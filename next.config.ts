@@ -43,7 +43,7 @@ const withPWA = withPWAInit({
       {
         urlPattern: ({ url, request }) =>
           url.pathname.includes("/api/") && request.method === "GET",
-        handler: "NetworkFirst",
+        handler: "StaleWhileRevalidate",
         options: {
           cacheName: "api-data-cache",
           expiration: {

@@ -38,9 +38,12 @@ import { ChangeNameDialog } from "@/app/(protected)/settings/changeName";
 import { ChangePasswordDialog } from "@/app/(protected)/settings/changePassword";
 import Loading from "@/app/loading";
 import { useLocale } from "use-intl";
+import { cookies } from "next/headers";
+import { revalidatePath } from "next/cache";
 import MotionButton from "@/components/ui/motion-button";
 import { AnimatePresence, motion } from "framer-motion";
 import { Skeleton } from "@/components/ui/skeleton";
+import { setLanguageCookie } from "@/app/(protected)/settings/changeLanguage";
 
 const PUBLIC_VAPID_KEY = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY;
 
@@ -107,7 +110,7 @@ export default function SettingsClient() {
         variables: { input: { userId, language: lang } },
       });
       await update({ language: lang });
-      router.refresh();
+      await setLanguageCookie(lang);
     } catch (e) {
       console.error(e);
     } finally {

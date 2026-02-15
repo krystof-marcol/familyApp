@@ -356,14 +356,6 @@ export default function CalendarClient() {
     { month: "long", year: "numeric" },
   );
   useEffect(() => updateCurrentDate(), []);
-  if (status === "loading") {
-    return (
-      <div className="p-4 space-y-4">
-        <Skeleton className="h-8 w-48" />
-        <div className="h-[80vh] border rounded-md bg-muted/10" />
-      </div>
-    );
-  }
 
   return (
     <div
@@ -400,7 +392,7 @@ export default function CalendarClient() {
               setRenderKey((prev) => prev + 1);
               setOpenPopup(true);
             }}
-            className="h-8"
+            className="text-xs sm:text-sm"
           >
             {t("newEventButton")}
           </MotionButton>

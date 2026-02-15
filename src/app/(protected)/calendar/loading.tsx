@@ -1,19 +1,35 @@
-import { Skeleton } from "@/components/ui/skeleton";
+import { getLocale, getTranslations } from "next-intl/server";
+import { CalendarShell } from "@/app/(protected)/calendar/CalendarShell";
 
-export default function Loading() {
+export default async function Loading() {
+  const t = await getTranslations("Calendar");
+  const locale = await getLocale();
+  const now = new Date();
+  const dateLocale = locale === "cz" ? "cs-CZ" : "en-US";
+  let monthYear = now.toLocaleDateString(dateLocale, {
+    month: "long",
+    year: "numeric",
+  });
+  let formattedDate = now.toLocaleDateString(dateLocale, {
+    weekday: "long",
+    day: "numeric",
+    month: "numeric",
+  });
+
+  formattedDate =
+    formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1);
   return (
-    <div className="flex flex-col h-full w-full p-4 space-y-4">
-      <div className="flex justify-between items-center">
-        <div className="space-y-2">
-          <Skeleton className="h-8 w-48" />
-          <Skeleton className="h-4 w-64" />
-        </div>
-        <Skeleton className="h-10 w-32" />
-      </div>
-
-      <div className="flex-1 border rounded-lg p-4">
-        <Skeleton className="h-full w-full" />
-      </div>
-    </div>
+    <CalendarShell
+      title={t("title")}
+      subtitle={t("titleInfo")}
+      tab1={t("allScheduled")}
+      tab2={t("events")}
+      btnNew={t("newEventButton")}
+      todayBtn={t("today")}
+      viewBtns={[t("day"), t("week"), t("month")]}
+      dateTitle={monthYear}
+      datePrecise={formattedDate}
+      language={locale}
+    />
   );
 }
