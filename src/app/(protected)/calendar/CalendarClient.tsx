@@ -27,7 +27,6 @@ import { usePageTutorial } from "@/hooks/usePageTutorial";
 import { useHolidays } from "@/hooks/useHolidays";
 
 import { useSession } from "next-auth/react";
-import { Skeleton } from "@/components/ui/skeleton";
 
 type eventsDataProps = {
   id: string;
@@ -112,6 +111,7 @@ export default function CalendarClient() {
     queryKey: ["calendarList", familyId],
     queryFn: () => fetchEvents(familyId),
     enabled: !!familyId,
+    staleTime: 1000 * 60 * 5,
   });
 
   const [optimisticEvents, setOptimisticEvents] = useState<eventsDataProps[]>(
@@ -360,7 +360,7 @@ export default function CalendarClient() {
   return (
     <div
       key={isMobile ? "mobile-view" : "desktop-view"}
-      className={isMobile ? "flex flex-col h-[85dvh] overflow-hidden" : ""}
+      className={isMobile ? "flex flex-col h-[84dvh] overflow-hidden" : ""}
     >
       <div
         className={`flex items-center justify-between pb-2 pr-2 ${isMobile ? "flex-shrink-0 pt-2 pl-2" : ""}`}
@@ -511,7 +511,7 @@ export default function CalendarClient() {
             </>
           ) : (
             <div className="flex-1 overflow-hidden relative mx-2 mb-2">
-              <div className="absolute inset-0 overflow-y-auto scrollbar-hide scroller-hide h-auto">
+              <div className="absolute inset-0 h-full w-full overflow-hidden">
                 <MobileCalendar
                   language={language as "en" | "cz"}
                   events={realEvents}

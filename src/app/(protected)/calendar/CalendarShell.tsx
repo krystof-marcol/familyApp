@@ -1,4 +1,3 @@
-import { Skeleton } from "@/components/ui/skeleton";
 import MotionButton from "@/components/ui/motion-button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
