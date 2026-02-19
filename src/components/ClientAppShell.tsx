@@ -8,6 +8,7 @@ import { Header } from "@/components/header";
 import { ThemeProvider } from "@/components/logic/ThemeProvider";
 import { ThemeSyncer } from "@/components/logic/theme-syncer";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 interface ClientAppShellProps {
   children: React.ReactNode;
@@ -26,6 +27,10 @@ export default function ClientAppShell({
   children,
   user,
 }: ClientAppShellProps) {
+  const pathname = usePathname();
+
+  const isAuthPage = pathname === "/auth" || pathname?.startsWith("/auth/");
+
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 500px)");
@@ -34,6 +39,7 @@ export default function ClientAppShell({
     mediaQuery.addEventListener("change", handleResize);
     return () => mediaQuery.removeEventListener("change", handleResize);
   }, []);
+
   const { data: session } = useSession();
 
   const familyName = user.family?.name ?? "";
@@ -44,7 +50,7 @@ export default function ClientAppShell({
 
   return (
     <SidebarProvider>
-      {!isMobile && (
+      {!isMobile && !isAuthPage && (
         <AppSidebar
           familyName={familyName}
           familyId={familyId}
@@ -54,12 +60,16 @@ export default function ClientAppShell({
       )}
 
       <div className="flex-1 flex flex-col h-screen overflow-hidden">
-        <Header
-          disabled={!isAuthenticated || !user.family}
-          imageUrl={userImage}
-        />
+        {!isAuthPage && (
+          <Header
+            disabled={!isAuthenticated || !user.family}
+            imageUrl={userImage}
+          />
+        )}
 
-        <main className="flex-1 overflow-auto p-4 pb-20 md:pb-4">
+        <main
+          className={`flex-1 overflow-auto p-4 ${isAuthPage ? "pb-4" : "pb-20 md:pb-4"}`}
+        >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <ThemeSyncer />
             {children}
@@ -67,7 +77,7 @@ export default function ClientAppShell({
         </main>
       </div>
 
-      {isMobile && <MobileNav familyId={familyId} />}
+      {isMobile && !isAuthPage && <MobileNav familyId={familyId} />}
     </SidebarProvider>
   );
 }
