@@ -69,7 +69,11 @@ const fetchEvents = async (id: string) => {
   return res.json();
 };
 
-export default function CalendarClient() {
+export default function CalendarClient({
+  serverFamilyId,
+}: {
+  serverFamilyId: string;
+}) {
   const calendarRef = useRef<FullCalendar>(null);
   const [view, setView] = useState<
     "timeGridDay" | "timeGridWeek" | "dayGridMonth"
@@ -81,7 +85,7 @@ export default function CalendarClient() {
   const { data: session, status } = useSession();
 
   const userId = session?.user?.id || "";
-  const familyId = session?.user?.familyId || "";
+  const familyId = serverFamilyId || session?.user?.familyId || "";
   const userName = session?.user?.name || "";
   const language = session?.user?.language || "en";
   const currentUserName = session?.user?.name || "User";
