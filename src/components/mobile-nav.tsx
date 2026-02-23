@@ -30,9 +30,9 @@ export function MobileNav({ familyId }: { familyId: string }) {
 
     if (url === "/shoplist") {
       queryClient.prefetchQuery({
-        queryKey: ["shoppingList"],
+        queryKey: ["shoppingList", familyId],
         queryFn: async () => {
-          const res = await fetch("/api/shop-list");
+          const res = await fetch(`/api/shop-list?familyId=${familyId}`);
           if (!res.ok) throw new Error("Network response was not ok");
           return res.json();
         },
@@ -54,9 +54,9 @@ export function MobileNav({ familyId }: { familyId: string }) {
 
     if (url === "/expenses") {
       queryClient.prefetchQuery({
-        queryKey: ["expenseList"],
+        queryKey: ["expenseList", familyId],
         queryFn: async () => {
-          const res = await fetch("/api/expenses");
+          const res = await fetch(`/api/expenses?familyId=${familyId}`);
           if (!res.ok) throw new Error("Network response was not ok");
           return res.json();
         },
@@ -65,9 +65,9 @@ export function MobileNav({ familyId }: { familyId: string }) {
     }
     if (url === "/homeduties") {
       queryClient.prefetchQuery({
-        queryKey: ["homeDutiesList"],
+        queryKey: ["homeDutiesList", familyId],
         queryFn: async () => {
-          const res = await fetch("/api/home-chores");
+          const res = await fetch(`/api/home-chores?familyId=${familyId}`);
           if (!res.ok) throw new Error("Network response was not ok");
           return res.json();
         },
@@ -77,11 +77,11 @@ export function MobileNav({ familyId }: { familyId: string }) {
   };
 
   const items = [
-    { title: t("shoppingList"), url: "/shoplist", icon: ShoppingBasket },
-    { title: t("homeDuties"), url: "/homeduties", icon: BrushCleaning },
-    { title: t("calendar"), url: "/calendar", icon: Calendar },
-    { title: t("expenses"), url: "/expenses", icon: HandCoins },
-    { title: t("settings"), url: "/settings", icon: SettingsIcon },
+    { title: "", url: "/shoplist", icon: ShoppingBasket },
+    { title: "", url: "/homeduties", icon: BrushCleaning },
+    { title: "", url: "/calendar", icon: Calendar },
+    { title: "", url: "/expenses", icon: HandCoins },
+    { title: "", url: "/settings", icon: SettingsIcon },
   ];
 
   return (
@@ -95,7 +95,7 @@ export function MobileNav({ familyId }: { familyId: string }) {
         "touch-none",
       )}
     >
-      <div className="grid h-20 grid-cols-5 mx-auto w-full max-w-md">
+      <div className="grid h-18 grid-cols-5 pl-3 pr-3 mx-auto w-full max-w-md">
         {items.map((item) => {
           const isActive = optimisticPath === item.url;
 
@@ -108,14 +108,18 @@ export function MobileNav({ familyId }: { familyId: string }) {
               onMouseEnter={() => prefetchRoute(item.url)}
               className="inline-flex flex-col items-center justify-center w-full h-full active:scale-95 transition-transform duration-100"
             >
-              <item.icon
+              <div
                 className={cn(
-                  "w-6 h-6 mb-1 transition-colors duration-200",
+                  "flex items-center justify-center mb-1 transition-all duration-200",
+                  "w-10 h-10",
                   isActive
-                    ? "text-primary dark:text-primary"
-                    : "text-gray-500 dark:text-gray-400",
+                    ? "border-2 border-primary rounded-xl text-primary dark:text-primary bg-primary/5"
+                    : "border-2 border-transparent text-gray-500 dark:text-gray-400",
                 )}
-              />
+              >
+                <item.icon className="w-6 h-6" />
+              </div>
+
               <span
                 className={cn(
                   "text-[10px] font-medium leading-none truncate w-full text-center transition-colors duration-200",
