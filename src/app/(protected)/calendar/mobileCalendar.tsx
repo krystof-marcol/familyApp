@@ -3,9 +3,9 @@
 import React, {
   useState,
   useRef,
-  useEffect,
   useMemo,
   useCallback,
+  useLayoutEffect,
 } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
@@ -137,7 +137,7 @@ const MonthView = React.memo(
                 >
                   <button
                     className={cn(
-                      "relative h-8 w-8 rounded-full flex items-center justify-center text-sm transition-all duration-200 mb-1",
+                      "relative h-8 w-8 rounded-full flex items-center justify-center text-sm transition-all duration-200 mb-0",
                       isSelected
                         ? "bg-foreground text-background font-semibold"
                         : isToday
@@ -243,16 +243,13 @@ export function MobileCalendar({
 
   const li = useMemo(() => (language === "en" ? en_list : cz_list), [language]);
 
-  useEffect(() => {
-    const timer = setTimeout(
-      () =>
-        todayRef.current?.scrollIntoView({
-          behavior: "instant",
-          block: "center",
-        }),
-      100,
-    );
-    return () => clearTimeout(timer);
+  useLayoutEffect(() => {
+    if (todayRef.current) {
+      todayRef.current.scrollIntoView({
+        behavior: "instant",
+        block: "center",
+      });
+    }
   }, []);
 
   const formatDate = useCallback(
@@ -362,7 +359,7 @@ export function MobileCalendar({
         ref={scrollRef}
         className="h-full overflow-y-auto hide-scrollbar pb-36"
       >
-        {months.map((m, i) => (
+        {months.map((m) => (
           <MonthView
             key={`${m.year}-${m.month}`}
             year={m.year}

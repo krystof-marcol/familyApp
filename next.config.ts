@@ -14,7 +14,6 @@ const withPWA = withPWAInit({
     clientsClaim: true,
     runtimeCaching: [
       {
-        // change url to match original
         urlPattern: /.*\/api\/.*/i,
         handler: "NetworkFirst",
         options: {
